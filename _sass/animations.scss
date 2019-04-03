@@ -1,0 +1,65 @@
+.cloud1 {
+	animation: cloudwiggle 5s 0s ease infinite;
+	fill: #cfe2f3;
+}
+@keyframes cloudwiggle {
+  0% {
+    transform: translateX(0px) translateY(0px);
+  }
+  25% {
+    transform: translateX(10px) translateY(10px);
+  }
+  50% {
+    transform: translateX(0px) translateY(0px);
+  }
+  75% {
+    transform: translateX(-10px) translateY(-10px);
+  }  
+  100% {
+    transform: translateX(0px) translateY(0px);
+  }
+}
+
+.cloud2 {
+	animation: cloud2wiggle 5s 2s ease infinite;
+	fill: #cfe2f3;
+}
+@keyframes cloud2wiggle {
+  0% {
+    transform: translateX(0px) translateY(0px);
+  }
+  25% {
+    transform: translateX(-10px) translateY(-10px);
+  }
+  50% {
+    transform: translateX(0px) translateY(0px);
+  }
+  75% {
+    transform: translateX(10px) translateY(10px);
+  }  
+  100% {
+    transform: translateX(0px) translateY(0px);
+  }
+}
+
+.mouse {
+  animation: mouse 10s 5s ease infinite;
+  fill: #cfe2f3;
+}
+@keyframes mouse {
+  0% {
+    transform: translateX(0px);
+  }
+  10% {
+    transform: translateX(10px);
+  }
+  50% {
+    transform: translateX(10px);
+  }
+  60% {
+    transform: translateX(0px);
+  }
+  100% {
+    transform: translateX(0px);
+  }
+}
