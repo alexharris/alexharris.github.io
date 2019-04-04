@@ -4,6 +4,7 @@
 
 @import "minima";
 
+// This is a custom thing so that the Bulma messag style has a shadow to match the bulma box style
 .message {
 
 	box-shadow: 0 2px 3px rgba(10, 10, 10, 0.1), 0 0 0 1px rgba(10, 10, 10, 0.1);
