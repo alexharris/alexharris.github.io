@@ -52,11 +52,9 @@ computed: {
 }
 {% endhighlight %}
 
-Why does this and selectFromTag both exist when they seem to do the same thing?
-
 Now in our template we use the value of selectedTag to determine the state of the form element, such as what value is pre-loaded, and whether to display the "clear" button:
 
-{% highlight javascript %}
+{% highlight html %}
 <form>
   <div class="form-group">                
     <div class="input-group input-group-sm">
@@ -75,7 +73,7 @@ Now in our template we use the value of selectedTag to determine the state of th
 </form>
 {% endhighlight %}
 
-So now when a page loads, it should be displaying the correct tag filter state based on the query parameter. But now what if the user, who has just arrived on the page, wants to change this filter? Notice in the snipper above that the select element has a `v-on:change="filteredTag"` property. When this field is changed, the filteredTag function gets called.
+So now when a page loads, it should be displaying the correct tag filter state based on the query parameter. But now what if the user, who has just arrived on the page, wants to change this filter? Notice in the snippet above that the select element has a `v-on:change="filteredTag"` property. When this field is changed, the filteredTag function gets called, which updates the route with the new tag query.
 
 {% highlight javascript %}
 filteredTag(e) {
@@ -86,29 +84,13 @@ filteredTag(e) {
 },  
 {% endhighlight %}
 
+The route has been updated, but the child element won't automatically detect that, so we need to have it "watch" the query for changes, and re-filter the results array like so:
 
-
-
-
-
-You’ll find this post in your `_posts` directory. Go ahead and edit it and re-build the site to see your changes. You can rebuild the site in many different ways, but the most common way is to run `jekyll serve`, which launches a web server and auto-regenerates your site when a file is updated.
-
-
-To add new posts, simply add a file in the `_posts` directory that follows the convention `YYYY-MM-DD-name-of-post.ext` and includes the necessary front matter. Take a look at the source for this post to get an idea about how it works.
-
-
-Jekyll also offers powerful support for code snippets:
-
-{% highlight ruby %}
-def print_hi(name)
-  puts "Hi, #{name}"
-end
-print_hi('Tom')
-#=> prints 'Hi, Tom' to STDOUT.
+{% highlight javascript %}
+watch: {
+    //watch tag for changes, and change the asset array when it does
+    '$route.query.tag': function() { // watch it
+      this.filterAssetArray()
+    }
+}    
 {% endhighlight %}
-
-Check out the [Jekyll docs][jekyll-docs] for more info on how to get the most out of Jekyll. File all bugs/feature requests at [Jekyll’s GitHub repo][jekyll-gh]. If you have questions, you can ask them on [Jekyll Talk][jekyll-talk].
-
-[jekyll-docs]: https://jekyllrb.com/docs/home
-[jekyll-gh]:   https://github.com/jekyll/jekyll
-[jekyll-talk]: https://talk.jekyllrb.com/
