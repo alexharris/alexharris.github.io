@@ -1,3 +1,13 @@
+section {
+  padding: 1em 0;
+}
+
+.navbar {
+  border-bottom: 1px solid #3273dc;
+  margin-bottom: 2em;
+}
+
+
 /**
  * Site header
  */
@@ -176,7 +186,7 @@
  * Page content
  */
 .page-content {
-  padding: $spacing-unit 0;
+  // padding: $spacing-unit 0;
   flex: 1;
 }
 

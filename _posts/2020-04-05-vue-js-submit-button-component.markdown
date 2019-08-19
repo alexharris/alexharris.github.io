@@ -2,7 +2,8 @@
 layout: post
 title:  "Vue.js Submit Button Component"
 date:   2019-04-28 03:45:02 -0700
-categories: vue javascript
+categories: blog
+tags: vue javascript 
 ---
 
 In the book "[Getting Real](https://basecamp.com/books/Getting%20Real.pdf)", 37Signals suggests incorporating administrative functionality into the public interfaces, rather than having dedicated administrative pages. One of the reasons given is that this means that you have to develop/maintain only half as many interfaces. Instead of one to display an item and one to edit it, you have only one, where users can view the thing, and adminstrators can access admin functionality. I have moving toward this model [Small Archives](https://smallarchives.com), and as a result have greatly reduced the number of pages I have to maintain, and also reduced the amount of variability between these pages. This morning I took this simplication a step further by creating a simple "Submit Button" Vue component to further standardize the UI/UX between various pages. Before today, I had about four forms that woud need updating any time I decided to make a change to form submission mechanics. Perhaps I made a change to the buttons colors, then kept working and forgot to take the time to make that same change everywhere else. As a result, there was drift in the consistency of these four forms and over time they all became quite different. This is a perfect use for a Vue component. I can build this interace once, and include it everywhere it needs to be. 

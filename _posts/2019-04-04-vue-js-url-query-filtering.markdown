@@ -2,7 +2,8 @@
 layout: post
 title:  "Vue.js URL Query Parameter Filtering"
 date:   2019-04-03 03:45:02 -0700
-categories: vue javascript
+categories: blog
+tags: vue javascript
 ---
 One project that I am currently working on is a simple publishing platform for archival collections called [Small Archives](https://smallarchives.com), built with Vue.js. Users create archives of items such as images, videos, and PDFs, which are then displayed, along with metadata, in a variety of ways. Currently, I am working on building out some of the filtering functionality so that visitors can easily view only certain facets of a given collection.
 
