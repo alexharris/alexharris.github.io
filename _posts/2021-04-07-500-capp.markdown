@@ -5,6 +5,7 @@ date:   2019-08-13 03:45:02 -0700
 categories: casestudy
 tags: wordpress
 image: /assets/500_logo_cropped.png
+hero: /assets/500-capp-case-study-hero.svg
 ---
 
 ---
